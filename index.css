@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sec-1 {
+    width: 70%;
+    margin: 30px auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+}
+
+.add-transac {
+    height: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+
+}
+
+.balance {
+    height: 50px;
+    width: max-content;
+    display: flex;
+
+}
+
+.filters {
+    width: 70%;
+    margin: 30px auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+}
+
+.transactions {
+    width: 70%;
+    margin: 30px auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+}
+
+button {
+    background-color: blue;
+}
