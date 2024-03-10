@@ -8,15 +8,15 @@ const addToLocalStorage = (key, newData) => {
     console.log("Auto-incremented ID:", newData.id);
   };
   
-  const getFromLocalStorage = (key) =>
+const getFromLocalStorage = (key) =>
     JSON.parse(localStorage.getItem(key)) || [];
   
-  const deleteFromLocalStorage = (key, id) => {
+const deleteFromLocalStorage = (key, id) => {
     const existingData = JSON.parse(localStorage.getItem(key)) || [];
     const updatedData = existingData.filter((item) => item.id !== id);
     localStorage.setItem(key, JSON.stringify(updatedData));
   };
-  const updateDataInLocalStorage = (key, id, updatedData) => {
+const updateDataInLocalStorage = (key, id, updatedData) => {
     const existingData = getFromLocalStorage(key);
     const updatedItems = existingData.map((item) => {
       if (item.id === id) {
@@ -27,13 +27,13 @@ const addToLocalStorage = (key, newData) => {
     localStorage.setItem(key, JSON.stringify(updatedItems));
   };
   
-  const addTransac = (transac) => 
+const addTransac = (transac) => 
     addToLocalStorage("transac", transac);
   
   
-  const getTransac = () => getFromLocalStorage("transac");
+const getTransac = () => getFromLocalStorage("transac");
   
-  const deleteTransac = (transacId) => deleteFromLocalStorage("transac", transacId);
+const deleteTransac = (transacId) => deleteFromLocalStorage("transac", transacId);
   
-  const updateTransac = (updateTransac) =>
+const updateTransac = (updateTransac) =>
     updateDataInLocalStorage("transac", updateTransac.id, updateTransac);
