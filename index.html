@@ -24,7 +24,7 @@
                 <option value="income">Income</option>
                 <option value="expense">Expense</option>
             </select>
-            <button id="add-transac-btn">Add Transaction</button>
+            <button id="transac-btn">Add Transaction</button>
         </div>
         <div class="balance">
             <h2>Balance in USD: <span></span></h2>
@@ -53,7 +53,9 @@
     </section>
     <section class="transactions">
         <h2>Transactions</h2>
-        <ul></ul>
+        <ul id="crudTable">
+
+        </ul>
     </section>
     <script src="./scripts/API.js"></script>
     <script src="./scripts/transac.js"></script>
