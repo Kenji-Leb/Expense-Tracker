@@ -65,8 +65,6 @@ const editData = (index) => {
   };
 };
 
-
-
 const updateDataView = () => {
   const transacs = getTransac();
   const tableBody = document.querySelector("#crudTable");
@@ -85,7 +83,7 @@ const validateTransac = (transac) => {
     : transac.transacCurrency === ""
     ? (alert("Currency is required"), false)
     : transac.transacType === ""
-    ? (alert("transacType is required"), false)
+    ? (alert("Type is required"), false)
     : true;
 };
 
