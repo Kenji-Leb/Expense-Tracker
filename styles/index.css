@@ -7,7 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #333;
+    color: #f5f5f5;
     margin: 0;
     padding: 0;
 }
@@ -16,16 +17,18 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #222;
+    border-radius: 5px;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #f5f5f5;
 }
 
 .sec-1 {
-    background-color: #fff;
+    background-color: #444;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -43,6 +46,7 @@ h1 {
 .add-transac select,
 .add-transac button {
     margin-bottom: 10px;
+    color: #f5f5f5;
 }
 
 .add-transac input,
@@ -50,7 +54,9 @@ h1 {
     width: 20%;
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #f5f5f5;
 }
 
 .add-transac button {
@@ -69,10 +75,11 @@ h1 {
 
 .balance {
     text-align: center;
+    color: #f5f5f5;
 }
 
 .filters {
-    background-color: #fff;
+    background-color: #444;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -83,6 +90,7 @@ h1 {
 .filters select,
 .filters button {
     margin-bottom: 10px;
+    color: #f5f5f5;
 }
 
 .filters input,
@@ -90,7 +98,9 @@ h1 {
     width: 20%;
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #f5f5f5;
 }
 
 .filters button {
@@ -108,14 +118,14 @@ h1 {
 }
 
 .transactions {
-    background-color: #fff;
+    background-color: #444;
     padding: 20px;
     border-radius: 5px;
 }
 
 .transactions h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #f5f5f5;
 }
 
 .transactions ul {
@@ -124,7 +134,7 @@ h1 {
 
 .transactions li {
     padding: 10px 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #555;
 }
 
 @media (max-width: 768px) {
