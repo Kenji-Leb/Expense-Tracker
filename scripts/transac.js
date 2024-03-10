@@ -23,7 +23,7 @@ const deleteData = (index) => {
   updateDataView();
 };
 
-const ediliata = (index) => {
+const editData = (index) => {
   let transacs = getTransac();
   document.getElementById("submit").style.display = "none";
   document.getElementById("update").style.display = "block";
@@ -83,7 +83,7 @@ const generateTransacIntoHtml = (transacList) => {
         <li>${element.transacType}</li>
         <li>
           <button onclick="deleteData(${index})" class="btn btn-danger">Delete</button>
-          <button onclick="ediliata(${index})" class="btn btn-warning">Edit</button>
+          <button onclick="editData(${index})" class="btn btn-warning">Edit</button>
         </li>
       </ul>
     `;
