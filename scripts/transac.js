@@ -8,6 +8,13 @@ const updateIncomeAndExpenses = () => {
   const expenses = transactions.filter(transaction => transaction.transacType === 'expense');
   console.log('Incomes:', incomes);
   console.log('Expenses:', expenses);
+
+  const totalIncome = incomes.reduce((total, income) => total + parseFloat(income.transacAmount), 0);
+  const totalExpense = expenses.reduce((total, expense) => total + parseFloat(expense.transacAmount), 0);
+  const balance = totalIncome - totalExpense;
+
+  const balanceElement = document.getElementById("balance");
+  balanceElement.textContent = ` ${balance.toFixed(2)} $`;
 };
 
 const AddData = () => {
