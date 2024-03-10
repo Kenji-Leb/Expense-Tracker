@@ -2,6 +2,14 @@ const transacAmount = document.getElementById("transacAmount");
 const transacCurrency = document.getElementById("transacCurrency");
 const transacType = document.getElementById("transacType");
 
+const updateIncomeAndExpenses = () => {
+  const transactions = getTransac();
+  const incomes = transactions.filter(transaction => transaction.transacType === 'income');
+  const expenses = transactions.filter(transaction => transaction.transacType === 'expense');
+  console.log('Incomes:', incomes);
+  console.log('Expenses:', expenses);
+};
+
 const AddData = () => {
   const transac = {
     transacAmount: transacAmount.value,
@@ -11,17 +19,19 @@ const AddData = () => {
 
   if (validateTransac(transac)) {
     addTransac(transac);
+    console.log('Transaction added:', transac);
+    updateIncomeAndExpenses();
     updateDataView();
     resetForm();
   }
-};
+}
 
 const deleteData = (index) => {
   const transacs = getTransac();
   const transacId = transacs[index].id;
   deleteTransac(transacId);
   updateDataView();
-};
+}
 
 const editData = (index) => {
   let transacs = getTransac();
@@ -36,12 +46,10 @@ const editData = (index) => {
     transacs[index].transacType = transacType.value;
     if (validateTransac(transacs[index])) {
       updateTransac(transacs[index]);
-      resetForm();
       updateDataView();
       document.getElementById("submit").style.display = "block";
       document.getElementById("update").style.display = "none";
     } else {
-      resetForm();
       updateDataView();
       document.getElementById("submit").style.display = "block";
       document.getElementById("update").style.display = "none";
@@ -92,4 +100,7 @@ const generateTransacIntoHtml = (transacList) => {
 };
 
 document.getElementById("transac-btn").addEventListener("click", AddData);
-document.addEventListener("DOMContentLoaded", () => updateDataView());
+document.addEventListener("DOMContentLoaded", () => {
+  updateDataView();
+  updateIncomeAndExpenses();
+});
