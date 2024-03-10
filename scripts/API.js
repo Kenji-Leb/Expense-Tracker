@@ -16,6 +16,7 @@ const deleteFromLocalStorage = (key, id) => {
     const updatedData = existingData.filter((item) => item.id !== id);
     localStorage.setItem(key, JSON.stringify(updatedData));
   };
+
 const updateDataInLocalStorage = (key, id, updatedData) => {
     const existingData = getFromLocalStorage(key);
     const updatedItems = existingData.map((item) => {
@@ -30,9 +31,9 @@ const updateDataInLocalStorage = (key, id, updatedData) => {
 const addTransac = (transac) => 
     addToLocalStorage("transac", transac);
   
-  
+
 const getTransac = () => getFromLocalStorage("transac");
-  
+
 const deleteTransac = (transacId) => deleteFromLocalStorage("transac", transacId);
   
 const updateTransac = (updateTransac) =>
