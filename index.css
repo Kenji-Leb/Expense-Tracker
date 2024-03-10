@@ -1,63 +1,147 @@
+/* Reset default styles */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .sec-1 {
-    width: 70%;
-    margin: 30px auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: grey;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .add-transac {
-    height: auto;
-    width: 50%;
     display: flex;
-    justify-content: center;
-    align-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.add-transac label,
+.add-transac input,
+.add-transac select,
+.add-transac button {
+    margin-bottom: 10px;
+}
+
+.add-transac input,
+.add-transac select {
+    width: calc(33.33% - 10px);
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-transac button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-transac button:hover {
+    background-color: #0056b3;
 }
 
 .balance {
-    height: 50px;
-    width: max-content;
-    display: flex;
-
+    text-align: center;
 }
 
 .filters {
-    width: 70%;
-    margin: 30px auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: grey;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.filters label,
+.filters input,
+.filters select,
+.filters button {
+    margin-bottom: 10px;
+}
+
+.filters input,
+.filters select {
+    width: calc(20% - 10px);
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.filters button {
+    padding: 8px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filters button:hover {
+    background-color: #0056b3;
 }
 
 .transactions {
-    width: 70%;
-    margin: 30px auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: grey;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-button {
-    background-color: blue;
+.transactions h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.transactions ul {
+    list-style-type: none;
+}
+
+.transactions li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    .add-transac input,
+    .add-transac select,
+    .filters input,
+    .filters select {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .add-transac input,
+    .add-transac select,
+    .filters input,
+    .filters select {
+        width: 100%;
+    }
 }
