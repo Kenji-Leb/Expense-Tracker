@@ -132,6 +132,16 @@ h1 {
     list-style-type: none;
 }
 
+.del-edit-btn {
+    padding: 8px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
 .transactions li {
     padding: 10px 0;
     border-bottom: 1px solid #555;
