@@ -54,6 +54,7 @@ const editData = (index) => {
     if (validateTransac(transacs[index])) {
       updateTransac(transacs[index]);
       updateDataView();
+      updateIncomeAndExpenses();
       document.getElementById("transac-btn").style.display = "block";
       document.getElementById("update").style.display = "none";
     } else {
@@ -63,6 +64,7 @@ const editData = (index) => {
     }
   };
 };
+
 
 
 const updateDataView = () => {
