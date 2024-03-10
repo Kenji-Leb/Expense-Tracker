@@ -47,15 +47,14 @@ h1 {
 
 .add-transac input,
 .add-transac select {
-    width: calc(33.33% - 10px);
+    width: 20%;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
 .add-transac button {
-    width: 100%;
-    padding: 8px;
+    padding: 8px 20px;
     border: none;
     background-color: #007bff;
     color: #fff;
@@ -88,7 +87,7 @@ h1 {
 
 .filters input,
 .filters select {
-    width: calc(20% - 10px);
+    width: 20%;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
